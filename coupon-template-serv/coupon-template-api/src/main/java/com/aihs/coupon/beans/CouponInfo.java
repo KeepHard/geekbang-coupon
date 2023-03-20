@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CoponInfo {
+public class CouponInfo {
     private Long id;
     private Long templateId;
 

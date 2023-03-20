@@ -5,20 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.aihs</groupId>
-        <artifactId>geekbang-coupon</artifactId>
+        <artifactId>coupon-calculation-serv</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>coupon-calculation-serv</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>coupon-calculation-api</module>
-        <module>coupon-calculation-impl</module>
-    </modules>
+    <artifactId>coupon-calculation-api</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aihs</groupId>
+            <artifactId>coupon-template-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>
