@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,5 +19,6 @@ public interface CouponTemplateDao extends JpaRepository<CouponTemplate,Long> {
 
     @Modifying
     @Query("update CouponTemplate c set c.available = 0 where c.id = :id")
+    @Transactional
     int makeCouponUnavailable(Long id);
 }
